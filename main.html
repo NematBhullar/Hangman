@@ -4,21 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman</title>
+    <link rel="icon" href="icon.png"/>
     <link rel="stylesheet" href="styles.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="main-content">
+        <div id="chances-icons">
+            <div id=1 class="circle">1</div>
+            <div id=2 class="circle">2</div>
+            <div id=3 class="circle">3</div>
+            <div id=4 class="circle">4</div>
+            <div id=5 class="circle">5</div>
+            <div id=6 class="circle">6</div>
+            <div id=7 class="circle">7</div>
+            <div id=8 class="circle">8</div>
+            <div id=9 class="circle">9</div>
+            <div id=10 class="circle">10</div>
+        </div>
         <div id="return-content"></div>
+        <div id="incorrect-letters"></div>
         <div id="final-message"></div>
         <div class="bottom-div">
-            <div id="score-div">Score: <span id="score">0</span></div>
-            <div id="num-chances-div">Chances: <span id="num-chances">10</span></div>
-            <button id="start-button">New Game</button>
+            <div id="score-div"><span id="score">0</span>Points</div>
+            <div id="num-chances-div"><span id="num-chances">10</span>Chances</div>
+            <button id="start-button">New Word</button>
         </div>
         <script src="functions.js"></script>
     </div>
 </body>
 </html>
+
+

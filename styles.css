@@ -17,6 +17,37 @@ body {
     align-items: center;
 }
 
+#chances-icons {
+    width: 100vw;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.circle, .circle-grey {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #90285A;
+    font-size: 20px;
+}
+
+.circle {
+    background-color: #F6DE88;
+}
+
+.circle-grey {
+    background-color: rgb(222, 222, 222, 0.5);
+}
+
+
 #final-message {
     color: white;
     font-size: 30px;
@@ -24,7 +55,11 @@ body {
 }
 
 #final-message span {
-    font-weight: bolder;
+    font-weight: 700;
+}
+
+#final-message span:hover {
+    color: #F6DE88;
 }
 
 #return-content {
@@ -32,6 +67,17 @@ body {
     color: white;
     font-size: 75px;
     font-weight: bold;
+}
+
+#incorrect-letters {
+    color: rgb(222, 222, 222);
+    font-size: 27px;
+    margin-top: 2rem;
+}
+
+#incorrect-letters span {
+    margin: 0 1rem;
+    background: linear-gradient(0.825turn, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
 }
 
 .bottom-div {
@@ -45,7 +91,22 @@ body {
     align-items: center;
     background-color: white;
     color: #90285A;
-    font-size: 18px;
+}
+
+#num-chances-div, #score-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+#num-chances, #score {
+    font-size: 25px;
+}
+
+#num-chances-div:hover, #score-div:hover {
+    color: #F6DE88;
 }
 
 #start-button {
@@ -53,18 +114,15 @@ body {
     height: 40px;
     font-family: 'Space Mono', 'monospace';
     font-size: 18px;
-    color: white;
-    background-color: #90285A;
+    color: #90285A;
+    background-color: #F6DE88;
     border: none;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+    transition: 0.5s;
 }
 
-#start-button:hover {
-    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, .2), inset -5px -5px 15px rgba(227, 182, 208, 0.2);
-}
-
-#start-button:disabled,
-#start-button[disabled]{
-  background-color: #6d2749;
+#start-button:hover, #start-button:disabled, #start-button[disabled] {
+    background-color: #F6DE88;
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, .1), inset -5px -5px 15px rgba(227, 182, 208, 0.2);
 }
