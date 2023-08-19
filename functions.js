@@ -63,12 +63,13 @@ addEventListener("keydown", (e) => {
     if (gameWon == false && gameLost == false && isAlpha(e.key) && word) {
         // Gets every position of the chosen letter, if in word
         let allPositions = [];
-        if (word.includes(e.key)) {
-            allPositions = [...word.matchAll(new RegExp(e.key, 'gi'))].map(a => a.index);
+        let letter = (e.key).toLowerCase();
+        if (word.includes(letter)) {
+            allPositions = [...word.matchAll(new RegExp(letter, 'gi'))].map(a => a.index);
         }
 
         // If the letter is not found in the word, a chance is decremented
-        if (allPositions.length == 0 && !seen.includes(e.key)) {
+        if (allPositions.length == 0 && !seen.includes(letter)) {
             let currChance = document.getElementById(numChances);
             currChance.className = "circle-grey";
 
@@ -78,20 +79,20 @@ addEventListener("keydown", (e) => {
         
         // If the letter is in the word, it will be displayed
          // Otherwise, it will be added to the incorrect letters
-        if (word.includes(e.key)) {
+        if (word.includes(letter)) {
             for (let i = 0; i < allPositions.length; i++) {
-                grid[allPositions[i]] = e.key;
+                grid[allPositions[i]] = letter;
             }
-        } else if (!incorrect.includes(e.key)) {
-            incorrect.push(e.key);
+        } else if (!incorrect.includes(letter)) {
+            incorrect.push(letter);
             
             let incorrectLetter = document.createElement('span');
-            incorrectLetter.textContent = e.key;
+            incorrectLetter.textContent = letter;
             incorrectLetters.append(incorrectLetter);
         }
         
         returnContent.textContent = grid.join(" ");
-        seen.push(e.key);
+        seen.push(letter);
 
         // If the user ran out of chances, the game is over
         if (numChances == 0) {
@@ -110,7 +111,7 @@ addEventListener("keydown", (e) => {
 })
 
 function isAlpha(ch) {
-    return ch >= "a" && ch <= "z" || ch >= "A" && ch <= "Z";
+    return (ch >= "a" && ch <= "z" || ch >= "A" && ch <= "Z") && ch.length == 1;
 }
 
 function endGame() {
