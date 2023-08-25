@@ -1,5 +1,5 @@
 # Hangman
-<img width="1470" alt="Screenshot 2023-08-25 at 5 17 07 pm" src="https://github.com/NematBhullar/Hangman/assets/91060343/feecd4aa-614d-484c-aba9-4bc8dca6e04c">
+<img width="1400" alt="Screenshot 2023-08-25 at 5 17 07 pm" src="https://github.com/NematBhullar/Hangman/assets/91060343/14735e2e-06a9-46d1-82a9-0d11dffa4f34">
 
 1. About
 2. Getting Started
