@@ -122,7 +122,7 @@ body {
     transition: 0.5s;
 }
 
-#start-button:hover, #start-button:disabled, #start-button[disabled] {
+#start-button:hover {
     background-color: #F6DE88;
     box-shadow: inset 5px 5px 15px rgba(0, 0, 0, .1), inset -5px -5px 15px rgba(227, 182, 208, 0.2);
 }
