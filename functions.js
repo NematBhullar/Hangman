@@ -1,5 +1,6 @@
 // DOM
-let chancesIcons = document.getElementById("chances-icons");
+// let chancesIcons = document.getElementById("chances-icons");
+let hangmanFrame = document.getElementById("hangman-frame"); 
 let returnContent = document.getElementById("return-content");
 let incorrectLetters = document.getElementById("incorrect-letters");
 let chances = document.getElementById("num-chances");
@@ -51,11 +52,17 @@ function createGame() {
     }
     returnContent.textContent = grid.join(" ");
 
+    // Initialise the frames
+    // hangmanFrame.remove(hangmanFrame.firstChild);
+    // let frame0 = document.createElement("img");
+    // frame0.src = 
+    hangmanFrame.src = "frame0.png";
+
     // Reset the chances icons
-    for(let i = 1; i <= numChances; i++) {
-        let circle = document.getElementById(i);
-        circle.className = "circle";
-    }
+    // for(let i = 1; i <= numChances; i++) {
+    //     let circle = document.getElementById(i);
+    //     circle.className = "circle";
+    // }
 }
 
 // Gets the letter that the user clicks on
@@ -70,9 +77,9 @@ addEventListener("keydown", (e) => {
 
         // If the letter is not found in the word, a chance is decremented
         if (allPositions.length == 0 && !seen.includes(letter)) {
-            let currChance = document.getElementById(numChances);
-            currChance.className = "circle-grey";
-
+            hangmanFrame.src = "frame" + (10 - numChances + 1) +  ".png"
+            // let currChance = document.getElementById(numChances);
+            // currChance.className = "circle-grey";
             numChances--;
             chances.textContent = numChances;
         }

@@ -8,50 +8,23 @@ body {
     font-family: 'Space Mono', 'monospace';
 }
 
+img {
+    width: 400px;
+}
+
 #main-content {
     width: 100vw;
-    height: clamp(calc(100vh - 100px), 90vh, 90vh);
+    height: calc(100vh - 150px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-#chances-icons {
-    width: 100vw;
-    position: absolute;
-    top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.circle, .circle-grey {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #90285A;
-    font-size: 20px;
-}
-
-.circle {
-    background-color: #F6DE88;
-}
-
-.circle-grey {
-    background-color: rgb(222, 222, 222, 0.5);
-}
-
 
 #final-message {
     color: white;
-    font-size: 30px;
-    margin-top: 2rem;
+    font-size: 25px;
+    margin-top: 1.5rem;
 }
 
 #final-message span {
@@ -71,7 +44,7 @@ body {
 
 #incorrect-letters {
     color: rgb(222, 222, 222);
-    font-size: 27px;
+    font-size: 25px;
     margin-top: 2rem;
 }
 
