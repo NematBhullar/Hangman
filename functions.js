@@ -98,7 +98,7 @@ addEventListener("keydown", (e) => {
         // If the user won, the game is over
         if (grid.indexOf("_") == -1) {
             gameWon = true;
-            points += word.length;
+            points += numChances;
             score.textContent = points;
             endGame();
         } 
@@ -117,6 +117,8 @@ function endGame() {
         let boldedWord = document.createElement('span');
         boldedWord.textContent = word;
         message.append(boldedWord);
+        points = 0;
+        score.textContent = points;
     } else {
         message.textContent = winningMessage;
     }
